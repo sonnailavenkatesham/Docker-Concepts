@@ -1,2 +1,3 @@
 FROM nginx
-RUN yum install ansible -y
+RUN rm -rf /usr/share/nginx/html/*
+ADD web /usr/share/nginx/html/
