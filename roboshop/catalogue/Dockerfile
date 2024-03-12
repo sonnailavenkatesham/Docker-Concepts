@@ -1,5 +1,5 @@
-FROM node:14
-RUN adduser roboshop
+FROM node:14.13-alpine
+RUN useradd roboshop
 USER roboshop
 WORKDIR /app
 COPY package.json /app

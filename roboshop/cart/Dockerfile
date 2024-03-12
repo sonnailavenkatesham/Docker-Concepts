@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:14.13-alpine
 RUN useradd roboshop
 USER roboshop
 WORKDIR /app
@@ -6,6 +6,5 @@ COPY package.json /app
 COPY server.js /app
 RUN npm install
 ENV REDIS_HOST=redis \
-    CATALOGUE_HOST=catalogue \
-    CATALOGUE_PORT=
-  
+    CATALOGUE_HOST=catalogue 
+CMD [ "node", "server.js" ]
