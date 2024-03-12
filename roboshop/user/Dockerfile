@@ -1,4 +1,4 @@
-FROM node:node:14.13-alpine
+FROM node:14.13-alpine
 RUN adduser roboshop
 USER roboshop
 WORKDIR /app
