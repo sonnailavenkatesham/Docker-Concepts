@@ -1,4 +1,4 @@
-FROM node:14.13-alpine
+FROM node:14
 RUN useradd roboshop
 USER roboshop
 WORKDIR /app
